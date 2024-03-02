@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Asegura que la web sea responsive en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Usuarios</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Formulario para el registro de usuarios -->
+    <form id="formularioRegistro" class="myform">
+      <label for="nombre">Nombre Completo</label>
+      <!-- Campo para ingresar el nombre -->
+      <input type="text" id="nombre" placeholder="Patrick Bateman" required />
+
+      <label for="correo">Email </label>
+      <!-- Campo para ingresar el correo electrónico -->
+      <input
+        type="email"
+        id="correo"
+        placeholder="pierce&pierce@gmail.com"
+        required
+      />
+      <label for="contrasena">Contraseña </label>
+      <!-- Campo para ingresar la contraseña -->
+      <input
+        type="password"
+        id="contrasena"
+        placeholder="VpBateman3379"
+        required
+      />
+      <!-- Botón para enviar el formulario -->
+      <button type="submit">Registrar</button>
+    </form>
+    <!-- División donde se mostrará la tabla de usuarios registrados -->
+    <div id="tablaUsuarios"></div>
+
+    <div id="toastMessage" class="toast"></div>
+    <!-- Vincula el archivo JavaScript -->
+    <script src="./main.js"></script>
+  </body>
+</html>

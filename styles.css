@@ -1,0 +1,129 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+  font-family: "Consolas";
+  margin: 0; /* Elimina el margen por defecto */
+  padding: 20px; /* Añade un relleno para separar el contenido de los bordes */
+  display: grid; /* Utiliza Grid en lugar de Flexbox */
+  place-items: center; /* Centra los elementos en la cuadrícula */
+  gap: 60px; /* Espacio entre las filas y columnas de la cuadrícula */
+  background-color: #f6c883;
+}
+
+/* Estilos para el formulario */
+.myform {
+  display: grid;
+  grid-template-columns: [labels] auto [controls] 1fr;
+  grid-auto-flow: row;
+  gap: 0.8em;
+  background: #3061e3;
+  padding: 1.5em;
+  width: 100%; /* Opcional: ajusta el ancho del formulario */
+  max-width: 500px; /* Opcional: establece un ancho máximo para el formulario */
+  border-radius: 25px;
+}
+.myform > label {
+  grid-column: labels;
+  grid-row: auto;
+  color: #ffffff;
+  align-self: center;
+}
+
+.myform > input,
+.myform > button {
+  grid-column: controls;
+  grid-row: auto;
+  border: none;
+  padding: 1em;
+  padding: 10px; /* Añade relleno dentro de los inputs y el botón */
+  font-size: 16px; /* Aumenta el tamaño de la fuente para mejorar la legibilidad */
+}
+
+/* Asegurando que los estilos de input se apliquen sobre otros posibles estilos */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  background-color: #3061e3; /* Reaplicando el color de fondo azul */
+  border-bottom: 1px solid #da2528; /* Reaplicando el borde inferior punteado rojo */
+  color: white; /* Reaplicando el color de texto blanco */
+}
+
+/* Estilos para cambiar el color del placeholder */
+input::placeholder {
+  color: #a9a9a9; /* Gris claro para el texto del placeholder */
+  opacity: 1; /* Asegura que el placeholder tenga la opacidad completa */
+  font-family: "Consolas";
+}
+
+button {
+  background-color: #da2528;
+  color: #ffffff;
+  border-radius: 10px;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #319938;
+  color: #da2528;
+  font-weight: bolder;
+  font-style: oblique;
+}
+/* Estilos para la división que contiene la tabla de usuarios */
+#tablaUsuarios {
+  width: 100%; /* Opcional: ajusta el ancho de la tabla de usuarios */
+  max-width: 600px; /* Opcional: establece un ancho máximo para la tabla */
+}
+
+/* Estilos generales para la tabla */
+table {
+  width: 100%; /* Asegura que la tabla ocupe todo el contenedor disponible */
+  border-collapse: collapse; /* Colapsa los bordes de la tabla */
+  margin-top: 20px; /* Añade espacio arriba de la tabla */
+}
+
+/* Estilos para las celdas del encabezado de la tabla */
+th,
+td {
+  text-align: center; /* Centra el texto en las celdas */
+  padding: 12px; /* Añade relleno dentro de las celdas */
+  border-bottom: 1px solid #ddd; /* Añade un borde al fondo de cada celda */
+}
+
+/* Estilos para las filas de la tabla */
+tr {
+  background-color: #f2f2f2; /* Añade un color de fondo para las filas pares */
+}
+
+/* Estilos para el encabezado de la tabla */
+thead {
+  background-color: #4caf50; /* Color de fondo para el encabezado */
+  color: white; /* Color de texto para el encabezado */
+}
+
+/* Mejora la visibilidad al pasar el cursor por encima de las filas */
+tr:hover {
+  background-color: #ddd; /* Cambia el color de fondo al pasar el cursor */
+}
+
+/* Estilos para las celdas de la tabla */
+td {
+  border-bottom: 1px solid #ddd; /* Añade un borde en la parte inferior de la celda */
+  color: #000000;
+}
+
+.toast {
+  position: fixed;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #d4cfc1;
+  color: #8a0303;
+  padding: 15px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  display: none;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+.toast.show {
+  display: block;
+}
